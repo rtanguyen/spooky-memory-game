@@ -1,5 +1,5 @@
-# Cat Yoga Memory Game
+# Spooky Memory Game
 
-A fun and simple memory game featuring some very zen cats! To play, select your difficulty level and then find the matching pairs in under 3 tries.
+A memory game to get you into the spooky season spirit. Built with react!
 
-Built with React.
+![Memory Game](src/assets/memory-game.jpg)

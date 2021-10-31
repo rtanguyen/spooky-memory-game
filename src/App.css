@@ -50,7 +50,7 @@
 }
 
 body {
-  background: linear-gradient(
+  /* background: linear-gradient(
     47deg,
     hsla(270, 29%, 47%, 1) 0%,
     hsla(271, 34%, 60%, 1) 35%,
@@ -75,10 +75,14 @@ body {
     hsla(276, 42%, 75%, 1) 77%,
     hsla(9, 86%, 85%, 1) 90%,
     hsla(29, 83%, 73%, 0.8) 100%
-  );
+  ); */
+  background: url("./assets/images/bg4.png") no-repeat center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("./assets/images/bg4.png");
   height: 100vh;
 }
 
