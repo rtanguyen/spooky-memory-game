@@ -1,5 +1,6 @@
 {
   "name": "spooky-memory-game",
+  "homepage": "https://rtanguyen.github.io/spooky-memory-game/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
