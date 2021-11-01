@@ -45,7 +45,7 @@ const Board = () => {
   const checkMatch = () => {
     if (firstCard.name && secondCard.name) {
       const match = firstCard.name === secondCard.name;
-      match ? solvedCards() : noMatch();
+      match ? solvedCards() : incorrectCards();
     }
   };
 
@@ -57,7 +57,7 @@ const Board = () => {
   };
 
   //update state if cards do not match to flip cards facedown
-  const noMatch = () => {
+  const incorrectCards = () => {
     setNoMatch([firstCard.name, secondCard.name]);
     setAttempts(attempts - 1);
     reset();
