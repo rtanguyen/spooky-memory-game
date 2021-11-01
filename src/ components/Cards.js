@@ -1,44 +1,31 @@
 import React, { useState, useEffect } from "react";
-import { flip, shuffle } from "lodash";
 import ReactCardFlip from "react-card-flip";
 import Tada from "react-reveal/Tada";
 
-import { styled } from "@mui/material/styles";
-import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
-import Box from "@mui/material/Box";
 import back from "../assets/images/back.png";
 
 const Cards = (props) => {
-  const {
-    key,
-    card,
-    index,
-    name,
-    pickedCard,
-    solved,
-    wrongGuess,
-    matchCounter,
-  } = props;
+  const { card, index, name, pickedCard, solved, noMatch, matchCounter } =
+    props;
   const [isFlipped, setIsFlipped] = useState(false);
-  const [click, setClick] = useState(true);
   const [tada, setTada] = useState(false);
+  const [click, setClick] = useState(true);
 
-  useEffect(() => {
-    if (wrongGuess.includes(name)) {
-      setTimeout(() => setIsFlipped(false), 800);
-    }
-  }, [wrongGuess]);
-
+  //disable click for matched cards
   useEffect(() => {
     if (solved.includes(index)) {
       setClick(false);
     }
   }, [solved]);
 
+  //turn cards face down if incorrect
   useEffect(() => {
-    console.log("u won");
+    if (noMatch.includes(name)) {
+      setTimeout(() => setIsFlipped(false), 800);
+    }
+  }, [noMatch]);
 
+  useEffect(() => {
     if (matchCounter === 8) {
       setTada(true);
     }
@@ -47,7 +34,7 @@ const Cards = (props) => {
   const handleClick = (e) => {
     e.preventDefault();
     const value = pickedCard(name, index);
-    if (value !== null) {
+    if (value !== null || value !== undefined) {
       setIsFlipped(true);
     }
   };
@@ -69,42 +56,5 @@ const Cards = (props) => {
     </Tada>
   );
 };
-// class Cards extends React.Component {
-//   constructor() {
-//     super();
-//     this.state = {
-//       isFlipped: false,
-//       found: false,
-//     };
-//     this.cardClick = this.cardClick.bind(this);
-//   }
-//   cardClick(e) {
-//     e.preventDefault();
-//     this.setState({ isFlipped: !this.state.isFlipped });
-//     console.log(this);
-//   }
-
-//   render() {
-//     const { card } = this.props;
-//     return (
-//       <ReactCardFlip
-//         flipDirection="horizontal"
-//         isFlipped={this.state.isFlipped}
-//         className="card"
-//       >
-//         <div className="mt-3 card back" onClick={this.cardClick}>
-//           <img src={back} />
-//         </div>
-//         <div
-//           className="mt-3 card front"
-//           onClick={this.cardClick}
-//           style={{ backgroundImage: { card } }}
-//         >
-//           <img src={card} />
-//         </div>
-//       </ReactCardFlip>
-//     );
-//   }
-// }
 
 export default Cards;

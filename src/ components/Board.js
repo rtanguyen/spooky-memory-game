@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { flip, shuffle } from "lodash";
+import { shuffle } from "lodash";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 
@@ -16,62 +16,56 @@ for (let i = 0; i < 2; i++) {
 }
 const shuffledCards = shuffle(imagesArr);
 
-const Board = (props) => {
-  const { matchCounter, setMatchedCounter, attempts, setAttempts } = props;
+const Board = () => {
   const [firstCard, setFirstCard] = useState({});
   const [secondCard, setSecondCard] = useState({});
-
   const [solved, setSolved] = useState([]);
-  const [wrongGuess, setWrongGuess] = useState([]);
-  // const [matchCounter, setMatchedCounter] = useState(0);
-  // const [lives, setLives] = useState(5);
+  const [noMatch, setNoMatch] = useState([]);
 
-  //check match if change made to second card
-  useEffect(() => {
-    checkMatch();
-  }, [secondCard]);
+  //track game stats
+  const [matchCounter, setMatchedCounter] = useState(0);
+  const [attempts, setAttempts] = useState(8);
 
   const pickedCard = (name, index) => {
     if (firstCard.index === index) {
       return;
     } else if (!firstCard.name) {
       setFirstCard({ name, index });
-      console.log(firstCard);
     } else if (!secondCard.name && firstCard.index !== index) {
       setSecondCard({ name, index });
-      console.log(secondCard);
     }
     return;
   };
 
-  console.log(solved);
+  //check match if change made to second card
+  useEffect(() => {
+    checkMatch();
+  }, [secondCard]);
 
   const checkMatch = () => {
-    console.log("check");
     if (firstCard.name && secondCard.name) {
       const match = firstCard.name === secondCard.name;
       match ? solvedCards() : noMatch();
     }
   };
 
+  //update state for matched cards' indexes. used to 'disable' clicking card
   const solvedCards = () => {
     setSolved([firstCard.index, secondCard.index]);
     setMatchedCounter(matchCounter + 1);
     reset();
   };
 
+  //update state if cards do not match to flip cards facedown
   const noMatch = () => {
-    setWrongGuess([firstCard.name, secondCard.name]);
+    setNoMatch([firstCard.name, secondCard.name]);
     setAttempts(attempts - 1);
     reset();
   };
 
-  // console.log(matchCounter, attempts);
   const reset = () => {
-    // } else {
     setFirstCard({});
     setSecondCard({});
-    // }
   };
 
   return (
@@ -88,7 +82,7 @@ const Board = (props) => {
                 name={card["name"]}
                 pickedCard={pickedCard}
                 solved={solved}
-                wrongGuess={wrongGuess}
+                noMatch={noMatch}
                 matchCounter={matchCounter}
               />
             </Grid>
