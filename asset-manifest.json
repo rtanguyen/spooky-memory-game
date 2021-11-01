@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/spooky-memory-game/static/css/main.8123e587.chunk.css",
-    "main.js": "/spooky-memory-game/static/js/main.39f3d14b.chunk.js",
-    "main.js.map": "/spooky-memory-game/static/js/main.39f3d14b.chunk.js.map",
+    "main.js": "/spooky-memory-game/static/js/main.1276b3cf.chunk.js",
+    "main.js.map": "/spooky-memory-game/static/js/main.1276b3cf.chunk.js.map",
     "runtime-main.js": "/spooky-memory-game/static/js/runtime-main.5c22213d.js",
     "runtime-main.js.map": "/spooky-memory-game/static/js/runtime-main.5c22213d.js.map",
     "static/js/2.b6657165.chunk.js": "/spooky-memory-game/static/js/2.b6657165.chunk.js",
@@ -27,6 +27,6 @@
     "static/js/runtime-main.5c22213d.js",
     "static/js/2.b6657165.chunk.js",
     "static/css/main.8123e587.chunk.css",
-    "static/js/main.39f3d14b.chunk.js"
+    "static/js/main.1276b3cf.chunk.js"
   ]
 }
