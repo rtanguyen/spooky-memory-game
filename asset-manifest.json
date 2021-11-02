@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/spooky-memory-game/static/css/main.ba0538bb.chunk.css",
-    "main.js": "/spooky-memory-game/static/js/main.1276b3cf.chunk.js",
-    "main.js.map": "/spooky-memory-game/static/js/main.1276b3cf.chunk.js.map",
+    "main.css": "/spooky-memory-game/static/css/main.5db18736.chunk.css",
+    "main.js": "/spooky-memory-game/static/js/main.ea2c20ab.chunk.js",
+    "main.js.map": "/spooky-memory-game/static/js/main.ea2c20ab.chunk.js.map",
     "runtime-main.js": "/spooky-memory-game/static/js/runtime-main.5c22213d.js",
     "runtime-main.js.map": "/spooky-memory-game/static/js/runtime-main.5c22213d.js.map",
-    "static/js/2.b6657165.chunk.js": "/spooky-memory-game/static/js/2.b6657165.chunk.js",
-    "static/js/2.b6657165.chunk.js.map": "/spooky-memory-game/static/js/2.b6657165.chunk.js.map",
+    "static/js/2.65bb73be.chunk.js": "/spooky-memory-game/static/js/2.65bb73be.chunk.js",
+    "static/js/2.65bb73be.chunk.js.map": "/spooky-memory-game/static/js/2.65bb73be.chunk.js.map",
     "static/js/3.85df829d.chunk.js": "/spooky-memory-game/static/js/3.85df829d.chunk.js",
     "static/js/3.85df829d.chunk.js.map": "/spooky-memory-game/static/js/3.85df829d.chunk.js.map",
     "index.html": "/spooky-memory-game/index.html",
-    "static/css/main.ba0538bb.chunk.css.map": "/spooky-memory-game/static/css/main.ba0538bb.chunk.css.map",
-    "static/js/2.b6657165.chunk.js.LICENSE.txt": "/spooky-memory-game/static/js/2.b6657165.chunk.js.LICENSE.txt",
+    "static/css/main.5db18736.chunk.css.map": "/spooky-memory-game/static/css/main.5db18736.chunk.css.map",
+    "static/js/2.65bb73be.chunk.js.LICENSE.txt": "/spooky-memory-game/static/js/2.65bb73be.chunk.js.LICENSE.txt",
     "static/media/App.css": "/spooky-memory-game/static/media/bg4.cb7afb80.png",
     "static/media/cauldron.702b1468.png": "/spooky-memory-game/static/media/cauldron.702b1468.png",
     "static/media/frankenstein.e67eb3c7.png": "/spooky-memory-game/static/media/frankenstein.e67eb3c7.png",
@@ -25,8 +25,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.5c22213d.js",
-    "static/js/2.b6657165.chunk.js",
-    "static/css/main.ba0538bb.chunk.css",
-    "static/js/main.1276b3cf.chunk.js"
+    "static/js/2.65bb73be.chunk.js",
+    "static/css/main.5db18736.chunk.css",
+    "static/js/main.ea2c20ab.chunk.js"
   ]
 }
